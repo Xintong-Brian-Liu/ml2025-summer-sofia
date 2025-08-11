@@ -40,3 +40,93 @@ Enter number 3: 30
 Enter integer X to search: 20
 Output: 2
 ```
+
+---
+
+# Assignment #5: Object-Oriented Programming (OOP) in Python
+
+## Overview
+This assignment extends the previous module by implementing the same functionality using Object-Oriented Programming principles. You'll create Python programs that demonstrate proper class design and modular programming.
+
+## Tasks
+
+### 1. Single-File OOP Implementation (`module5_oop.py`)
+Create a Python program that implements the number storage and search functionality using OOP:
+
+#### Requirements:
+- **Class-Based Design**: All data processing should be handled by a custom class
+- **Core Methods**: 
+  - Data initialization
+  - Data insertion (one number at a time)
+  - Data search functionality
+- **Same User Interface**: Program should behave identically to `module4.py`
+- **Error Handling**: Include input validation and error handling
+
+#### Class Structure:
+```python
+class NumberStorage:
+    def __init__(self):
+        # Initialize storage
+        
+    def initialize(self, n):
+        # Prepare storage for n numbers
+        
+    def insert_number(self, number):
+        # Add a number to storage
+        
+    def search_number(self, x):
+        # Search for x, return 1-based index or -1
+```
+
+### 2. Modular Implementation
+Create a modular version split into two files:
+
+#### `module5_mod.py`
+- Contains **only** the `NumberStorage` class definition
+- No main execution code
+- Well-documented class with docstrings
+
+#### `module5_call.py`
+- Contains the main program logic
+- Imports and uses the `NumberStorage` class from `module5_mod.py`
+- Handles all user interaction
+
+### 3. File Organization
+Your repository should contain:
+```
+ml2025-summer-sofia/
+├── module4.py          # Original procedural implementation
+├── module5_oop.py      # Single-file OOP implementation
+├── module5_mod.py      # Class module
+├── module5_call.py     # Main program using the module
+└── README.md           # This file
+```
+
+## Example Usage
+Both OOP implementations should produce identical output:
+
+```
+Enter N (positive integer): 3
+Storage initialized for 3 numbers.
+Please enter 3 numbers (one by one):
+Enter number 1: 10
+Enter number 2: 20
+Enter number 3: 30
+Enter X (number to search): 20
+2
+```
+
+```
+Enter N (positive integer): 4
+Storage initialized for 4 numbers.
+Please enter 4 numbers (one by one):
+Enter number 1: 5
+Enter number 2: 15
+Enter number 3: 25
+Enter number 4: 35
+Enter X (number to search): 100
+-1
+```
+
+## Submission
+Upload all files (`module5_oop.py`, `module5_mod.py`, `module5_call.py`) to your existing `ml2025-summer-sofia` repository.
